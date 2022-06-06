@@ -67,7 +67,8 @@ const RegisterPage = () => {
                   />
 
                   <Buttons>
-                      <RegisterButton onPress={onRegister} >
+                      <RegisterButton 
+                      onPress={onRegister} >
                             <TextButton>Register</TextButton>
                       </RegisterButton>
 

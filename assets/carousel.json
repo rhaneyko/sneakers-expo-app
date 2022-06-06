@@ -1,17 +1,33 @@
 [
   {
+    "title": "Nike React Presto",
+    "price": "99.99",
+    "url": "./src/img/SneakersImg/sneaker1.png"
+  },
+  {
     "title": "The Shawshank Redemption",
-    "promo": "50% off",
+    "price": "10.99",
     "url": "https://avatars.githubusercontent.com/u/49030804?v=4"
   },
   {
     "title": "The Shawshank Redemption",
-    "promo": "50% off",
+    "price": "10.99",
     "url": "https://avatars.githubusercontent.com/u/49030804?v=4"
+  },
+
+  {
+    "title": "The Shawshank Redemption",
+    "price": "10.99",
+    "url": ""
+  }, 
+  {
+    "title": "The Shawshank Redemption",
+    "price": "10.99",
+    "url": ""
   },
   {
     "title": "The Shawshank Redemption",
-    "promo": "50% off",
-    "url": "https://avatars.githubusercontent.com/u/49030804?v=4"
+    "price": "10.99",
+    "url": ""
   }
 ]

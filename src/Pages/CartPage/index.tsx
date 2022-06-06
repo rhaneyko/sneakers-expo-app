@@ -1,8 +1,5 @@
 import React from 'react';
 
-import { StatusBar } from 'expo-status-bar';
-
-
 import { AntDesign } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 

@@ -16,6 +16,7 @@
     "@react-navigation/native-stack": "^6.6.2",
     "expo": "~45.0.0",
     "expo-app-loading": "~2.0.0",
+    "expo-linear-gradient": "~11.3.0",
     "expo-splash-screen": "~0.15.1",
     "expo-status-bar": "~1.3.0",
     "firebase": "^9.8.2",
@@ -30,8 +31,8 @@
     "react-native-screens": "~3.11.1",
     "react-native-web": "0.17.7",
     "rive-react-native": "^2.1.37",
-    "styled-components": "^5.3.5",
-    "expo-linear-gradient": "~11.3.0"
+    "sneaks-api": "^1.2.3",
+    "styled-components": "^5.3.5"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

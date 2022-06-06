@@ -2,12 +2,15 @@ import React, { useEffect, useState } from 'react';
 import { FlatList } from 'react-native';
 import { useAnimatedStyle, useSharedValue, withSpring } from 'react-native-reanimated';
 
-import SideBar from '../../components/SideBar';
+import {
+    Container, ScrollView, 
+
+} from './styles';
+
 import Header from './Header';
-import TabBar from '../../components/TabBar';
 
-
-import * as S from './styles';
+import products from '../../components/Data/Products/products';
+import Product from '../Product'
 
 
 export default function Home() {
@@ -16,7 +19,6 @@ export default function Home() {
   const contentScale = useSharedValue(0);
 
   const [openMenu, setOpenMenu] = useState(false);
-  const [closeMenu, setCloseMenu] = useState(false);
   const [openOnboardModal, setOpenOnboardModal] = useState(false);
 
   useEffect(() => {
@@ -40,15 +42,17 @@ export default function Home() {
   }));
 
   return (
-    <S.Container style={[animatedContentSyle]} >
+    <Container style={[animatedContentSyle]} >
       <Header
         openMenu={openMenu}
         setIsOpenMenu={setOpenMenu}
         setOpenOnboardModal={setOpenOnboardModal}
-
       />
-      <SideBar openMenu={openMenu}/>
-      <TabBar openMenu={openMenu || openOnboardModal} />
-    </S.Container>
+         <FlatList
+             data={products}
+             renderItem={({ item }) => <Product item={item} />}
+             showsVerticalScrollIndicator={false}
+             />
+    </Container>
   );
 }

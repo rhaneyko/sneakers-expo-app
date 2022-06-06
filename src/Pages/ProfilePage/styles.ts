@@ -7,9 +7,32 @@ export const Container = styled.SafeAreaView`
     align-items: center;
 `;
 
+export const Header = styled.View`
+  width: 100%;
+  height: ${RFPercentage(5)}px;
+
+  flex-direction: row;
+
+  padding: 4px 8px;
+
+  align-items: flex-start;
+  justify-content: space-between;
+
+  background-color: ${props => props.theme.colors.secondary};
+`;
+
+export const Title = styled.Text`
+    font-family: ${props => props.theme.fonts.title};
+    font-size: ${RFValue(24)}px;
+    color: ${props => props.theme.colors.title};
+
+    margin-top: -4px;
+    margin-right: 170px;
+`;
+
 export const UserProfile = styled.View`
     width: 100%;
-    height: 300px;
+    height: 350px;
 
     flex-direction: column;
 

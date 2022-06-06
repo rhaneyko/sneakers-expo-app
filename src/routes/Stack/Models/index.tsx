@@ -10,7 +10,10 @@ export type propsNavigationStack = {
     LoginPage: undefined
     HomePage: undefined
     CartPage: undefined
-    DrawerPage: undefined
+    SavedPage: undefined
+    ProfilePage: undefined,
+    ProductPage: undefined,
+    ProductDetailPage: undefined,
 }
 
 export type propsStack = NativeStackNavigationProp<propsNavigationStack>
