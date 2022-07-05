@@ -10,6 +10,8 @@ import {
 
 import { AntDesign } from '@expo/vector-icons'
 import { useNavigation } from '@react-navigation/native';
+import { propsStack } from '../../../routes/Stack/Models';
+import DetailProduct from '../../../components/Data/Products/products'
 
 interface DetailProps {
     item: {
@@ -23,7 +25,7 @@ interface DetailProps {
 }
 
 const ProductDetailPage = ({ item }: DetailProps) => {
-    const navigation = useNavigation();
+    const navigation = useNavigation<propsStack>();
     return (
         <Container>
             <AntDesign 
@@ -32,12 +34,10 @@ const ProductDetailPage = ({ item }: DetailProps) => {
             color="#000" 
             onPress={() => navigation.goBack()}
             />
-            <Image source={{uri: item.imgDetail}}/>
+            <Image source={{ uri: item.image }} />
             <Title>{item.title}</Title>
             <Price>
-                {item.oldPrice && (
-                    <OldPrice>${item.oldPrice.toFixed(2)}</OldPrice>
-                )}
+                {item.price.toFixed(2)}
             </Price>
         </Container>
     )

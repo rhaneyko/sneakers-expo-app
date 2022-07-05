@@ -13,10 +13,12 @@ import {
 } from './styles';
 
 import { useNavigation } from '@react-navigation/native';
+import ProductDetail from './ProductDetail'
+import { propsStack } from '../../routes/Stack/Models';
 
 interface ProductItemProps {
 item: {
-    id: string;
+    
     title: string;
     image: string;
     imgDetail: string;
@@ -26,15 +28,19 @@ item: {
 }
 
 const Product = ({ item}: ProductItemProps) => {
-    const navigation = useNavigation();
+    const navigation = useNavigation<propsStack>();
 
-    // const openProduct = () => {
-    //   navigation.navigate('ProductDetailPage', {id: item.id});
-    // };
+    //  const openProduct = () => {
+    //    navigation.navigate('ProductDetailPage', {id: item.id});
+    //  };
+
+   
 
     return(
        <Container>
-        <Pressable  >
+        <Pressable  
+        onPress={() => navigation.navigate('ProductDetailPage')}
+        >
           <LeftCard>
             <Image source={{uri: item.image}} />
           </LeftCard>
@@ -42,19 +48,9 @@ const Product = ({ item}: ProductItemProps) => {
              <CardTitle>
                {item.title}
              </CardTitle>
-          {/* Ratings */}
-          {/* <View>
-            {[0, 0, 0, 0, 0].map((el, i) => (
-              <AntDesign
-                key={`${item.id}-${i}`}
-                size={18}
-                color={'#e47911'}
-              />
-            ))}
-          </View> */}
             <CardPrice >${item.price.toFixed(2)}
               {item.oldPrice && (
-                <CardOldPrice > ${item.oldPrice.toFixed(2)}</CardOldPrice>
+                <CardOldPrice>  ${item.oldPrice.toFixed(2)}</CardOldPrice>
               )}
             </CardPrice>
           </RightCard>
