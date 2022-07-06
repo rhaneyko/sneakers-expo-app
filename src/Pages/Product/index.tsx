@@ -1,5 +1,7 @@
 import React from 'react'
 
+
+
 import {
     Container,
     Image,
@@ -13,12 +15,11 @@ import {
 } from './styles';
 
 import { useNavigation } from '@react-navigation/native';
-import ProductDetail from './ProductDetail'
 import { propsStack } from '../../routes/Stack/Models';
 
 interface ProductItemProps {
 item: {
-    
+    id: string;
     title: string;
     image: string;
     imgDetail: string;
@@ -30,16 +31,14 @@ item: {
 const Product = ({ item}: ProductItemProps) => {
     const navigation = useNavigation<propsStack>();
 
-    //  const openProduct = () => {
-    //    navigation.navigate('ProductDetailPage', {id: item.id});
-    //  };
-
-   
+    const openProduct = () => {
+      navigation.navigate('ProductDetailPage', { id: item.id });
+    };
 
     return(
        <Container>
         <Pressable  
-        onPress={() => navigation.navigate('ProductDetailPage')}
+        onPress={openProduct}
         >
           <LeftCard>
             <Image source={{uri: item.image}} />

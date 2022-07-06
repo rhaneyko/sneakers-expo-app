@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import {
     Container,
     Image,
@@ -9,9 +9,9 @@ import {
 } from './styles'
 
 import { AntDesign } from '@expo/vector-icons'
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useRoute } from '@react-navigation/native';
 import { propsStack } from '../../../routes/Stack/Models';
-import DetailProduct from '../../../components/Data/Products/products'
+import { Product } from '../../../models';
 
 interface DetailProps {
     item: {
@@ -25,6 +25,27 @@ interface DetailProps {
 }
 
 const ProductDetailPage = ({ item }: DetailProps) => {
+    // const [product, setProduct] = useState<Product | undefined>(undefined);
+
+    // const [selectedOption, setSelectedOption] = useState<string | undefined>(
+    //     undefined,
+    //   );
+
+    //   useEffect(() => {
+    //     if (!route.params?.id) {
+    //       return;
+    //     }
+    //     DataStore.query(Product, route.params.id).then(setProduct);
+    //   }, [route.params?.id]);
+    
+    //   useEffect(() => {
+    //     if (product?.options) {
+    //       setSelectedOption(product.options[0]);
+    //     }
+    //   }, [product]);
+
+
+
     const navigation = useNavigation<propsStack>();
     return (
         <Container>
@@ -36,9 +57,11 @@ const ProductDetailPage = ({ item }: DetailProps) => {
             />
             <Image source={{ uri: item.image }} />
             <Title>{item.title}</Title>
-            <Price>
-                {item.price.toFixed(2)}
-            </Price>
+            <Price>{item.price.toFixed(2)}</Price>
+            {item.oldPrice && (
+                <OldPrice>{item.oldPrice.toFixed(2)}</OldPrice>
+            )}
+
         </Container>
     )
 }
