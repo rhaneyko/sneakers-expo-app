@@ -14,8 +14,8 @@ export const Header = styled.View`
   flex-direction: row;
 
   padding: 4px 8px;
-
-  align-items: flex-start;
+  
+  align-items: center;
   justify-content: space-between;
 
   background-color: ${props => props.theme.colors.secondary};
@@ -27,7 +27,7 @@ export const Title = styled.Text`
     color: ${props => props.theme.colors.title};
 
     margin-top: -4px;
-    margin-right: 170px;
+    margin-right: 135px;
 `;
 
 export const UserProfile = styled.View`
@@ -43,6 +43,15 @@ export const UserProfile = styled.View`
  
     background-color: ${props => props.theme.colors.secondary};
     
+`;
+
+export const ProfilePicture = styled.View`
+    width: 200px;
+    height: 200px;
+
+    border-radius: 100px;
+
+    background-color: ${props => props.theme.colors.primary};
 `;
 
 export const Username = styled.Text`

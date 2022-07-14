@@ -6,6 +6,7 @@ import {
     Header,
     Title,
     UserProfile,
+    ProfilePicture,
     Username,
     Configs,
     Config,
@@ -31,15 +32,8 @@ const ProfilePage = () => {
                    onPress={() => navigation.goBack()} />
                    <Title>Perfil</Title>
                </Header>
+                <ProfilePicture />
                
-                <Image
-                   source={{
-                       uri: 'https://avatars.githubusercontent.com/u/49030804?v=4'}} 
-                   style={{
-                       width: 200,
-                       height: 200,
-                       borderRadius: 100}} 
-                       />
                 <Username>Nome Usuário</Username>
              </UserProfile>
               
