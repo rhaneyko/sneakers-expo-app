@@ -31,14 +31,9 @@ item: {
 const Product = ({ item}: ProductItemProps) => {
     const navigation = useNavigation<propsStack>();
 
-    const openProduct = () => {
-      navigation.navigate('ProductDetailPage', { id: item.id });
-    };
-
     return(
        <Container>
         <Pressable  
-        onPress={openProduct}
         >
           <LeftCard>
             <Image source={{uri: item.image}} />
