@@ -32,8 +32,8 @@ const ProfilePage = () => {
                    onPress={() => navigation.goBack()} />
                    <Title>Perfil</Title>
                </Header>
-                <ProfilePicture />
                
+                <ProfilePicture />
                 <Username>Nome Usuário</Username>
              </UserProfile>
               
